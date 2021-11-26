@@ -34,14 +34,7 @@ bot.on('message', (msg) => {
 });
 
 
-/* GET users listing. *//*
-router.get('/', (req, res, next) => {
-  res.json({
-    "status": 202,
-    "messgae": "Success"
-  });
-}); */
-
+/* GET users listing. */
 // https://radenesp-tele1.herokuapp.com/api/sensor/125/50/300
 router.get('/sensor/:sensor1/:sensor2/:sensor3', (req, res, next) => {
   try {
@@ -65,15 +58,5 @@ router.get('/sensor/:sensor1/:sensor2/:sensor3', (req, res, next) => {
       next(err);
   }
 });
-
-// https://esp-telebot.herokuapp.com/api/test/cobacoba
-/*router.get('/test/:key', function(req, res, next){
-    bot.sendMessage(
-            global_msg_id, //msg.id
-            `${req.params.key}`
-    );
-    res.json(req.params.key);
-});*/
-
 
 module.exports = router;
