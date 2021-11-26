@@ -34,30 +34,30 @@ bot.on('message', (msg) => {
 });
 
 
-/* GET users listing. */
+/* GET users listing. *//*
 router.get('/', (req, res, next) => {
   res.json({
     "status": 202,
     "messgae": "Success"
   });
-}); 
+}); */
 
 // https://radenesp-tele1.herokuapp.com/api/sensor/125/50/300
 router.get('/sensor/:sensor1/:sensor2/:sensor3', (req, res, next) => {
   try {
       bot.sendMessage(
             global_msg_id, //msg.id
-            `Pembacaan Sensor 1 : ${req.params.sensor1},\n 
-            Pembacaan Sensor 2 : ${req.params.sensor2},\n 
-            Pembacaan Sensor 3 : ${req.params.sensor3}`
+            `\nPembacaan Sensor 1 = ${req.params.sensor1},\n 
+            Pembacaan Sensor 2 = ${req.params.sensor2},\n 
+            Pembacaan Sensor 3 = ${req.params.sensor3}`
      );
       res.json({
         "status": 202,
         "message": "Success",
         "data": {
-          "sensor_1": parseInt(req.params.sensor3),
-          "sensor_2": parseInt(req.params.sensor1),
-          "sensor_3": parseInt(req.params.sensor2)
+          "sensor_1": parseInt(req.params.sensor1),
+          "sensor_2": parseInt(req.params.sensor2),
+          "sensor_3": parseInt(req.params.sensor3)
         }
       });
   } catch (err) {
