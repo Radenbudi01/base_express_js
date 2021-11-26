@@ -34,13 +34,13 @@ bot.on('message', (msg) => {
 });
 
 
-/* GET users listing. *//*
+/* GET users listing. */
 router.get('/', (req, res, next) => {
   res.json({
     "status": 202,
     "messgae": "Success"
   });
-}); */
+}); 
 
 // https://esp-telebot.herokuapp.com/api/sensor/123/65/78
 router.get('/sensor/:sensor1/:sensor2/:sensor3', (req, res, next) => {
