@@ -14,7 +14,7 @@ bot.onText(/\/start/, (msg) => {
     global_msg_id = msg.chat.id;
     bot.sendMessage(
         global_msg_id,
-        `hello ${msg.chat.first_name}, welcome...\n
+        `Hello ${msg.chat.first_name}, welcome...\n
         click /show_url`
     );
 });
@@ -47,16 +47,17 @@ router.get('/sensor/:sensor1/:sensor2/:sensor3', (req, res, next) => {
   try {
       bot.sendMessage(
             global_msg_id, //msg.id
-            `\nPembacaan Sensor 1 = ${req.params.sensor1},\n 
-            Pembacaan Sensor 2 = ${req.params.sensor2},\n 
-            Pembacaan Sensor 3 = ${req.params.sensor3}`
+            `Pembacaan Data Sensor :\n 
+            Sensor 1 = ${req.params.sensor1}\n 
+            Sensor 2 = ${req.params.sensor2}\n 
+            Sensor 3 = ${req.params.sensor3}`
      );
       res.json({
-        "status": 202,
-        "message": "Success",
+        "status": 202,\n
+        "message": "Success",\n
         "data": {
-          "sensor_1": parseInt(req.params.sensor1),
-          "sensor_2": parseInt(req.params.sensor2),
+          "sensor_1": parseInt(req.params.sensor1),\n
+          "sensor_2": parseInt(req.params.sensor2),\n
           "sensor_3": parseInt(req.params.sensor3)
         }
       });
@@ -66,13 +67,13 @@ router.get('/sensor/:sensor1/:sensor2/:sensor3', (req, res, next) => {
 });
 
 // https://esp-telebot.herokuapp.com/api/test/cobacoba
-router.get('/test/:key', function(req, res, next){
+/*router.get('/test/:key', function(req, res, next){
     bot.sendMessage(
             global_msg_id, //msg.id
             `${req.params.key}`
     );
     res.json(req.params.key);
-});
+});*/
 
 
 module.exports = router;
