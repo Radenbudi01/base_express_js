@@ -35,23 +35,27 @@ bot.on('message', (msg) => {
 
 
 /* GET users listing. */
-// https://radenesp-tele1.herokuapp.com/api/sensor/125/50/300
-router.get('/sensor/:sensor1/:sensor2/:sensor3', (req, res, next) => {
+// https://radenesp-tele1.herokuapp.com/api/sensor/125/50/300/23/34
+router.get('/sensor/:sensor1/:sensor2/:sensor3/:sensor4/:sensor5/', (req, res, next) => {
   try {
       bot.sendMessage(
             global_msg_id, //msg.id
             `Pembacaan Data Sensor :\n 
-            Sensor 1 = ${req.params.sensor1}\n 
-            Sensor 2 = ${req.params.sensor2}\n 
-            Sensor 3 = ${req.params.sensor3}`
+            Sensor 1 = ${req.params.sensor1}\n
+            Sensor 2 = ${req.params.sensor2}\n
+            Sensor 3 = ${req.params.sensor3}\n
+            Sensor 4 = ${req.params.sensor4}\n 
+            Sensor 5 = ${req.params.sensor5}`
      );
       res.json({
-        "status": 202,
+        "status": 100,
         "message": "Success",
         "data": {
-          "\nsensor_1": parseInt(req.params.sensor1),
-          "\nsensor_2": parseInt(req.params.sensor2),
-          "\nsensor_3": parseInt(req.params.sensor3)
+          "sensor_1": parseInt(req.params.sensor1),
+          "sensor_2": parseInt(req.params.sensor2),
+          "sensor_3": parseInt(req.params.sensor3),
+          "sensor_4": parseInt(req.params.sensor4),
+          "sensor_5": parseInt(req.params.sensor5)
         }
       });
   } catch (err) {
