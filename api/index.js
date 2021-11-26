@@ -53,11 +53,11 @@ router.get('/sensor/:sensor1/:sensor2/:sensor3', (req, res, next) => {
             Sensor 3 = ${req.params.sensor3}`
      );
       res.json({
-        "status": 202,\n
-        "message": "Success",\n
+        "status": 202,
+        "message": "Success",
         "data": {
-          "sensor_1": parseInt(req.params.sensor1),\n
-          "sensor_2": parseInt(req.params.sensor2),\n
+          "sensor_1": parseInt(req.params.sensor1),
+          "sensor_2": parseInt(req.params.sensor2),
           "sensor_3": parseInt(req.params.sensor3)
         }
       });
