@@ -24,7 +24,7 @@ bot.onText(/\/show_url/, (msg) => {
     bot.sendMessage(
         global_msg_id,
         `
-            https://radenesp-tele1.herokuapp.com/api/sensor/50/100/150
+            https://radenesp-tele1.herokuapp.com/api/sensor
         `
     );
 });
