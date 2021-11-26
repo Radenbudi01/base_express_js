@@ -24,7 +24,9 @@ bot.onText(/\/show_url/, (msg) => {
     bot.sendMessage(
         global_msg_id,
         `
-            url data sensor :\nhttps://radenesp-tele1.herokuapp.com/api/sensor
+            Masukkan data 5 sensor pada url\n
+            url data sensor :\n
+            https://radenesp-tele1.herokuapp.com/api/sensor
         `
     );
 });
