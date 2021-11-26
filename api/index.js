@@ -51,8 +51,8 @@ router.get('/sensor/:sensor1/:sensor2/:sensor3/:sensor4/:sensor5/', (req, res, n
         "status": 100,
         "message": "Success",
         "data": {
-          "sensor_1": parseInt(req.params.sensor1),
-          "sensor_2": parseInt(req.params.sensor2),
+          \n"sensor_1": parseInt(req.params.sensor1),
+          \n"sensor_2": parseInt(req.params.sensor2),
           "sensor_3": parseInt(req.params.sensor3),
           "sensor_4": parseInt(req.params.sensor4),
           "sensor_5": parseInt(req.params.sensor5)
