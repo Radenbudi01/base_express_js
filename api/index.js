@@ -24,7 +24,7 @@ bot.onText(/\/show_url/, (msg) => {
     bot.sendMessage(
         global_msg_id,
         `
-            https://radenesp-tele1.herokuapp.com/api/sensor
+            url data sensor :\nhttps://radenesp-tele1.herokuapp.com/api/sensor
         `
     );
 });
@@ -49,9 +49,9 @@ router.get('/sensor/:sensor1/:sensor2/:sensor3', (req, res, next) => {
         "status": 202,
         "message": "Success",
         "data": {
-          "sensor_1": parseInt(req.params.sensor1),
-          "sensor_2": parseInt(req.params.sensor2),
-          "sensor_3": parseInt(req.params.sensor3)
+          "\nsensor_1": parseInt(req.params.sensor1),
+          "\nsensor_2": parseInt(req.params.sensor2),
+          "\nsensor_3": parseInt(req.params.sensor3)
         }
       });
   } catch (err) {
